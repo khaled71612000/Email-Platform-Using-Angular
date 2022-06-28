@@ -1,0 +1,24 @@
+<div class="field">
+  <label>{{ label }}</label>
+
+  <input *ngIf="controlType==='input'" 
+  [type]="inputType" [formControl]='control'>
+
+  <textarea *ngIf="controlType==='textarea'" 
+  [formControl]='control'></textarea>
+  
+  <div *ngIf="showErrors()" class="ui pointing red basic label">
+    <p *ngIf="control.errors.required">Value is Required</p>
+    <p *ngIf="control.errors.email">
+      Enter a valid email
+    </p>
+    <p *ngIf="control.errors.minlength">Value entered is {{control.errors.minlength.actualLength}}
+      and it should be atleast {{control.errors.minlength.requiredLength}}
+    </p>
+    <p *ngIf="control.errors.maxlength">Value entered is {{control.errors.maxlength.actualLength}}
+      and it shouldnt be longer than {{control.errors.maxlength.requiredLength}}</p>
+    <p *ngIf="control.errors.pattern">Invalid Format</p>
+    <p *ngIf="control.errors.nonUniqueUsername">Username is taken</p>
+    <p *ngIf="control.errors.noConnection">No interenet connection</p>
+  </div>
+</div>
