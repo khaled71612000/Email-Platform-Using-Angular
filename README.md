@@ -1,5 +1,9 @@
-# Emailclient
+Email Platform Using Angular is a project developed using Angular CLI version 10.1.0. It showcases the creation of an email client platform, providing users with essential email functionalities.
 
+Features
+Email Client: Basic email functionalities for sending and receiving emails.
+Angular Framework: Built with Angular for a modern and responsive interface.
+Development Tools: Includes setup for development server, code scaffolding, build processes, unit tests, and end-to-end tests.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
 ## Development server
